@@ -1,13 +1,13 @@
-# Credenciales y archivos sensibles de Drupal
+# Credenciales y archivos de configuración de Drupal
 sites/*/settings.php
 sites/*/settings.local.php
 sites/*/services.yml
 sites/*/services.local.yml
 
-# Archivos pesados subidos por usuarios (fotos de eventos, PDFs)
+# Archivos multimedia subidos por usuarios (fotos de eventos, PDFs)
 sites/*/files/
 
-# Carpetas secundarias del servidor que no son la web principal
+# Carpetas secundarias del servidor
 wiki/
 wp-content/
 wp-includes/
@@ -19,7 +19,7 @@ repositorio/
 # Dependencias generadas
 vendor/
 
-# Archivos de copia de seguridad y volcados de bases de datos
+# Archivos de volcado de base de datos y copias
 *.sql
 *.sql.gz
 *.tar.gz
