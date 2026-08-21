@@ -1,0 +1,43 @@
+.img-viaje{
+  width: 20%;
+  float:left;
+  display: block;
+  clear: both;
+}
+
+
+
+.titulo-viaje{
+  font-size: 20px;
+  font-weight: bold; 
+  clear: both;
+}
+
+.texto-viaje{
+  float: left;
+  width: 55%;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 5%;
+}
+
+
+@media screen and ( max-width: 1024px ) {
+  .img-viaje{
+    width:80%;
+    margin-left: 5%;
+    display: block;
+    clear: both;
+  }
+  
+  .texto-viaje{
+    width: 80%;
+  }
+  
+  .titulo-viaje{
+    margin-left: 5%;
+    display: block;
+    clear: both;
+  }
+}
+

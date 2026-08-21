@@ -1,0 +1,39 @@
+#header {
+    background: white url(/themes/header_topbg.png) 0 -5px repeat-x;
+    height: 10em;
+
+}
+#superfish-supperfish>li>ul>li>a{
+
+float: initial!important;
+border-radius: 0px!important;
+
+}
+
+#block-bartik-branding>a>img{
+  max-width: 60%;
+    height: auto;
+    margin-top: 1em;
+}
+.region-header{
+  width:80%;
+  margin:0 auto;
+}
+#block-gtranslate{
+  float: left;
+    margin-left: -11%;
+}
+.clearfix .menu{
+  height:0em;
+}
+
+#superfish-supperfish{
+  margin-left: 63%;
+}
+
+@media screen and ( max-width: 1024px ) {
+  .site-branding__logo{
+    padding-top: 15px;
+    
+  }
+}

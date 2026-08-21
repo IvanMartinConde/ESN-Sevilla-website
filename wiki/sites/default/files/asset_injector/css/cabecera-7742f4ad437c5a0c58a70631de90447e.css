@@ -1,0 +1,132 @@
+.view-cabecera>div>div>article>div>div{
+  display: flex;
+    height: 600px;
+}
+#textocabecera{
+  margin-top: -8em;
+}
+#show_bg_2 {
+   background:#0099d2;
+  
+    width: 85%;
+
+    background-size: cover;
+    color: white;
+    padding: 20px;
+}
+
+#show_bg_2>div>p{
+  margin-left: 7em;
+    width: 60%;
+}
+#show_bg_2>div>h3{
+  margin-left: 6.5em;
+    width: 60%;
+    background: #747474;
+    border-radius: 4px;
+    text-align: center;
+}
+#show_bg_2>div>h2{
+font-size: 4em;
+    margin-left: 1.6em;
+    font-family: Lato;
+    letter-spacing: 1px;
+    font-weight:900;
+    }
+.region-highlighted {
+    margin: 0em;
+}
+#superfish-supperfish{
+position: absolute;
+    margin-top: -6em;
+  
+    margin-left: 68%;
+    
+    }
+header>h2{
+  display:none;
+}
+.layout-container {
+    max-width:4000px!important;
+}
+#show_bg {
+   background-image: linear-gradient(to left,rgba(245,246,252,0.52),rgb(0 153 210)),url(/themes/cabecera.jpg);
+    width: 80%;
+
+    background-size: cover;
+    color: white;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1500px) { 
+  
+  
+  
+  #show_bg {
+    background-image: linear-gradient(to left,rgba(245,246,252,0.52),rgb(0 153 210)),url(/themes/cabecera.jpg);
+    width: 112%;
+    background-size: cover;
+    color: white;
+    order: 1;
+    display: flex;
+}
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 900px) { 
+
+#show_bg_2 {
+    background: #0099d2;
+    width: 100%;
+    background-size: cover;
+    color: white;
+     padding: 0px!important;
+    order: 1;
+    height: 200px;
+}
+#show_bg {
+    background-image: linear-gradient(to bottom,rgba(245,246,252,0.52),rgb(0 153 210)),url(/themes/cabecera.jpg)!important;
+    width: 100%;
+    background-size: cover;
+    color: whit;
+    order: 0;
+    height: 678px;
+}
+.view-cabecera>div>div>article>div>div {
+    display: flex;
+      height: 801px;
+    flex-direction: column;
+}
+#block-bartik-branding>a>img {
+    max-width: 64%;
+   
+    margin-top: -1em;
+    margin-left: -3em;
+}
+
+}
+@media screen and (min-width: 300px) and (max-width:500px){
+.view-cabecera>div>div>article>div>div {
+    display: flex;
+    height: 518px;
+    flex-direction: column;
+}
+#show_bg_2>div>h2 {
+    font-size: 2.5em!important;
+    margin-left: 1em!important;
+}
+#show_bg_2>div>p {
+    margin-left: 3em!important;
+}
+#show_bg_2>div>h3 {
+    margin-left: 2.5em!important;
+   
+}
+#block-bartik-branding>a>img {
+    max-width: 44%!important;
+   
+    margin-top: 0em!important;
+}
+#textocabecera {
+    margin-top: -12em!important;
+}
+}

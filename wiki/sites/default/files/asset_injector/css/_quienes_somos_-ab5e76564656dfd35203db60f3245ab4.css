@@ -1,0 +1,80 @@
+#div-junta, #div-miembros-1, #div-miembros-2, #div-miembros-honor-1, #div-miembros-honor-2{
+  display: flex;
+  margin-left: 7%;
+  width: 85%;
+}
+
+#div-miembros-2{
+  margin-bottom: 25px;
+}
+
+#div-presidencia, #div-vicepresidencia, #div-vocalia, #div-secretaria, #div-tesoreria, #div-miembros-1-1, #div-miembros-1-2{
+  flex: 1;
+  flex-basis: 20%;
+
+}
+
+#nombre-junta, #nombre-miembro{
+  font-weight: bold;
+  text-align: center;
+  color: #7ac143;
+  margin-top: 20px;
+}
+
+#apellido{
+  font-weight: bold;
+  text-align: center;
+  color: #7ac143;
+}
+
+.img_round img{
+  border-radius: 50%;
+
+}
+
+#div-img-junta, #div-img-miembro{
+  text-align: center;
+}
+
+#img-junta, #img-miembro, #img-mdh{
+  width: 70%;
+}
+
+#cargo-junta, #cargo-miembro, #lr, #pm{
+  text-align: center;
+  color: #f47b20;
+}
+
+#apartado-who{
+  color: #ec008c;
+  padding-left: 5%;
+}
+
+#hr-who{
+  color: #00aeef;
+  width: 90%;
+}
+
+#div-miembros-honor-1-1, #div-miembros-honor-1-2{
+  flex: 1;
+  flex-basis: 25%;
+}
+
+@media screen and ( max-width: 1024px ) {
+  #nombre-junta, #nombre-miembro{
+    font-weight: 600;
+    text-align: center;
+    color: #7ac143;
+    font-size: 11px;
+  }
+  #cargo-junta, #cargo-miembro, #lr, #pm{
+    text-align: center;
+    color: #f47b20;
+    font-size: 7px;
+  }
+  
+  #img-junta, #img-miembro, #img-mdh{
+    width: 100%;
+  }
+}
+

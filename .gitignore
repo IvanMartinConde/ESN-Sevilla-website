@@ -1,0 +1,30 @@
+# Credenciales y configuracion de Drupal
+sites/*/settings.php
+sites/*/settings.local.php
+sites/*/services.yml
+sites/*/services.local.yml
+
+# Archivos y multimedia subidos (fotos, PDFs)
+sites/*/files/
+
+# Dependencias y temporales
+vendor/
+*.sql
+*.zip
+*.tar.gz
+.DS_Store
+Thumbs.db
+
+# Credenciales de WordPress
+wp-config.php
+
+# Archivos multimedia subidos (fotos de eventos, PDFs)
+wp-content/uploads/
+
+# Archivos de caché y logs
+*.log
+*.sql
+*.zip
+*.tar.gz
+.DS_Store
+Thumbs.db

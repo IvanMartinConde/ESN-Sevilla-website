@@ -1,0 +1,48 @@
+#blog-de-silvio{
+  width: 100%;
+}
+
+#texto-silvio-1{
+  width: 60%;
+  margin-left: 10%;
+  float: left;
+  
+}
+
+#div-foto-silvio-1{
+  padding-left: 2%;
+  float: right;
+}
+
+#div-foto-silvio-2{
+  margin-left: 30%;
+}
+
+.titulo-receta{
+  font-weight: 900;
+  text-align: center;
+}
+
+.img-receta{
+  border-radius: 30%;
+}
+
+.titulo-articulo-silvio{
+  text-align: center;
+}
+
+.imagen-articulo-silvio{
+}
+
+@media screen and ( max-width: 1024px ) {
+
+#texto-silvio-1{
+  width: 90%;
+  margin-left: 5%;
+
+  
+}
+#div-foto-silvio-1{
+}
+
+}
