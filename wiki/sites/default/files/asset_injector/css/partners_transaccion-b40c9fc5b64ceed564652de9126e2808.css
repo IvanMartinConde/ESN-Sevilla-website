@@ -1,7 +1,0 @@
-.imgPartner{
-  transition: transform 1s;
-}
-
-.imgPartner:hover{
-  transform: scale(1.45);
-}

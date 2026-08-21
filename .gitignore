@@ -1,30 +1,32 @@
-# Credenciales y configuracion de Drupal
+# Credenciales y archivos sensibles de Drupal
 sites/*/settings.php
 sites/*/settings.local.php
 sites/*/services.yml
 sites/*/services.local.yml
 
-# Archivos y multimedia subidos (fotos, PDFs)
+# Archivos pesados subidos por usuarios (fotos de eventos, PDFs)
 sites/*/files/
 
-# Dependencias y temporales
+# Carpetas secundarias del servidor que no son la web principal
+wiki/
+wp-content/
+wp-includes/
+wp-admin/
+dev/
+testing.esnsevilla.org/
+repositorio/
+
+# Dependencias generadas
 vendor/
+
+# Archivos de copia de seguridad y volcados de bases de datos
 *.sql
-*.zip
+*.sql.gz
 *.tar.gz
+*.zip
+
+# Basura del sistema operativo y editores
 .DS_Store
 Thumbs.db
-
-# Credenciales de WordPress
-wp-config.php
-
-# Archivos multimedia subidos (fotos de eventos, PDFs)
-wp-content/uploads/
-
-# Archivos de caché y logs
-*.log
-*.sql
-*.zip
-*.tar.gz
-.DS_Store
-Thumbs.db
+.idea/
+.vscode/
