@@ -1,0 +1,27 @@
+/* Prueba de estilos */
+body {
+  background-color: #fafafa;
+}
+
+:root {
+  /* Paleta oficial de ESN */
+  --esn-cyan: #00aeef;
+  --esn-magenta: #ec008c;
+  --esn-green: #7ac143;
+  --esn-orange: #f39200;
+  --esn-dark-blue: #2e3192;
+  
+  /* Neutros y maquetación */
+  --text-main: #2d3748;
+  --bg-light: #f8fafc;
+  --white: #ffffff;
+  --font-base: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-family: var(--font-base);
+  color: var(--text-main);
+  background-color: var(--bg-light);
+  margin: 0;
+  padding: 0;
+}
