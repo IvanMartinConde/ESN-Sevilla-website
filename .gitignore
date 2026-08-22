@@ -30,3 +30,8 @@ vendor/
 Thumbs.db
 .idea/
 .vscode/
+
+sites/default/settings.php
+sites/default/files/
+sites/development.services.yml
+.htaccess
