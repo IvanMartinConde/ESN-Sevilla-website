@@ -1,0 +1,141 @@
+/* ==========================================================================
+   FEED DE INSTAGRAM (CARRUSEL INFINITO)
+   ========================================================================== */
+
+.esn-insta-section {
+  padding: 4rem 0 5rem 0;
+  background-color: #ffffff;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Cabecera de la sección */
+.esn-insta-header {
+  max-width: 800px;
+  margin: 0 auto 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.insta-badge {
+  display: inline-block;
+  color: var(--esn-magenta);
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.esn-insta-header h2 {
+  font-family: var(--font-base);
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.5px;
+}
+
+.esn-insta-header p {
+  font-size: 1.05rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.esn-insta-header p a {
+  color: var(--esn-cyan);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.esn-insta-header p a:hover {
+  text-decoration: underline;
+}
+
+/* Contenedor del carrusel con difuminado suave en los bordes */
+.esn-carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent 100%);
+}
+
+/* Carril de movimiento continuo */
+.esn-carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: scrollTrack 35s linear infinite;
+}
+
+/* Pausar al pasar el ratón */
+.esn-carousel-track:hover {
+  animation-play-state: paused;
+}
+
+/* Tarjetas individuales */
+.insta-card {
+  position: relative;
+  width: 270px;
+  height: 270px;
+  border-radius: 18px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  display: block;
+}
+
+.insta-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.insta-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  transition: opacity 0.25s ease;
+}
+
+.insta-card-overlay span {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  background: rgba(236, 0, 140, 0.9); /* Magenta ESN */
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover de tarjeta */
+.insta-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+.insta-card:hover img {
+  transform: scale(1.08);
+}
+
+.insta-card:hover .insta-card-overlay {
+  opacity: 1;
+}
+
+/* Keyframes de animación infinita */
+@keyframes scrollTrack {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 0.75rem));
+  }
+}
