@@ -2,6 +2,10 @@ global-styling:
   version: 1.x
   css:
     theme:
-      css/custom.css: {}
+      css/variables.css: {}
+      css/header.css: {}
+      css/hero.css: {}
+      css/components.css: {}
+      css/footer.css: {}
   js:
     js/custom.js: {}
