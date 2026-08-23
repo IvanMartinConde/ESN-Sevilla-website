@@ -1,0 +1,186 @@
+/* ==========================================================================
+   HERO BANNER UNIFICADO (ESN SEVILLA)
+   ========================================================================== */
+
+/* 1. Reset del contenedor exterior de Drupal (sin fondos duplicados) */
+.highlighted,
+.region-highlighted {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.highlighted::before,
+.region-highlighted::before,
+.highlighted::after,
+.region-highlighted::after {
+  content: none !important;
+}
+
+/* Ocultar el título técnico de Drupal */
+.block-views-blockcabecera-block-1 .node__title {
+  display: none !important;
+}
+
+/* 2. Tarjeta Azul Principal: aquí reside el fondo, la foto difuminada y el espaciado */
+#show_bg_2 {
+  position: relative !important;
+  background: linear-gradient(135deg, #00aeef 0%, #2e3192 100%) !important;
+  border-radius: 20px !important;
+  max-width: 1400px !important;
+  margin: 2rem auto !important; /* Margen superior e inferior para despegarlo del header */
+  padding: 4.5rem 3.5rem !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 30px rgba(0, 174, 239, 0.15) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  box-sizing: border-box !important;
+}
+
+/* 3. Foto difuminada dentro del cuadro azul, a la derecha del texto */
+#show_bg_2::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 55% !important; /* Ocupa la mitad derecha */
+  height: 100% !important;
+  background-image: url('../images/hero-bg.jpg') !important;
+  background-repeat: no-repeat !important;
+  background-position: center right !important;
+  background-size: cover !important;
+  opacity: 0.38 !important; /* Transparencia para integrarse con el azul */
+  mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%) !important;
+  -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+/* 4. Columna de texto (se superpone por encima de la foto) */
+#textocabecera {
+  position: relative !important;
+  z-index: 2 !important;
+  max-width: 620px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  gap: 1.25rem !important;
+}
+
+/* Título */
+#textocabecera h2 {
+  font-family: var(--font-base) !important;
+  font-size: 3.5rem !important;
+  font-weight: 900 !important;
+  letter-spacing: -1px !important;
+  color: #ffffff !important;
+  margin: 0 !important;
+  line-height: 1.1 !important;
+  text-transform: uppercase;
+}
+
+/* Párrafo */
+#textocabecera p {
+  font-family: var(--font-base) !important;
+  font-size: 1.1rem !important;
+  line-height: 1.65 !important;
+  color: #f8fafc !important;
+  margin: 0 !important;
+  font-weight: 400 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+/* Contenedor del botón */
+#textocabecera h3 {
+  margin: 0.8rem 0 0 0 !important;
+  padding: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  display: flex !important;
+}
+
+/* Botón CTA naranja */
+#textocabecera h3 a {
+  display: inline-flex !important;
+  align-items: center !important;
+  background-color: var(--esn-orange) !important;
+  color: #ffffff !important;
+  font-family: var(--font-base) !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  padding: 0.85rem 2.2rem !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 4px 14px rgba(243, 146, 0, 0.45) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease !important;
+}
+
+#textocabecera h3 a:hover {
+  background-color: #d97706 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(243, 146, 0, 0.6) !important;
+}
+
+/* Limpieza de contenedor residual */
+#show_bg {
+  display: none !important;
+}
+
+/* Fila de acciones: Botón CTA + Redes Sociales */
+.hero-actions {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 1.5rem !important;
+  margin-top: 1rem !important;
+}
+
+#textocabecera .hero-actions h3 {
+  margin: 0 !important;
+}
+
+/* Contenedor de iconos */
+.hero-social-links {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+}
+
+/* Botones circulares translúcidos */
+.social-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  transition: all 0.25s ease !important;
+}
+
+.social-btn:hover {
+  background: #ffffff !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Colores específicos de marca al pasar el ratón */
+.social-btn.ig:hover { color: #E4405F !important; }
+.social-btn.tt:hover { color: #000000 !important; }
+.social-btn.wa:hover { color: #25D366 !important; }
+.social-btn.fb:hover { color: #1877F2 !important; }
