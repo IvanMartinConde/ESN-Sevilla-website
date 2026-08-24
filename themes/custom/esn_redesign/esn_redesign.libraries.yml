@@ -6,6 +6,8 @@ global-styling:
       css/header.css: {}
       css/hero.css: {}
       css/components.css: {}
+      css/events.css: {}
       css/footer.css: {}
+
   js:
     js/custom.js: {}
