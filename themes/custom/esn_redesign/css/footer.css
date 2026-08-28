@@ -1,0 +1,255 @@
+/* ==========================================================================
+   1. SECCIÓN MAPA (DESTACADO INFERIOR)
+   ========================================================================== */
+
+/* Ancho completo y reset de columnas para la región del mapa */
+.region-featured-bottom-first,
+.region-featured-bottom-second,
+#block-mapa,
+.block-views-blockmapa-block {
+  width: 100% !important;
+  max-width: 100% !important;
+  float: none !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  clear: both !important;
+}
+
+#block-mapa iframe,
+.block-views-blockmapa-block iframe {
+  width: 100% !important;
+  display: block !important;
+  border: 0 !important;
+}
+
+
+/* ==========================================================================
+   2. CARRUSEL HORIZONTAL DE PARTNERS (LOGOS AMPLIADOS)
+   ========================================================================== */
+
+/* Contenedor exterior del bloque de partners */
+.region-featured-bottom-first .block-views-blockpartner-footer-block_1,
+.region-featured-bottom-first .view-partner-footer,
+[id*="partnersfooter"],
+.block-views-blockpartner-footer-block,
+.block-views-blockpartnersfooter-block {
+  width: 100% !important;
+  max-width: 100% !important;
+  background: #ffffff !important;
+  padding: 28px 0 !important;
+  overflow: hidden !important;
+  position: relative !important;
+  display: block !important;
+  clear: both !important;
+  border-top: 1px solid #ebebeb !important;
+  border-bottom: 1px solid #ebebeb !important;
+}
+
+/* Forzar la lista <ul> a ser una fila horizontal animada */
+.region-featured-bottom-first .view-partner-footer .item-list ul,
+.region-featured-bottom-first .view-partner-footer ul,
+[id*="partnersfooter"] .item-list ul,
+[id*="partnersfooter"] ul {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 55px !important;
+  width: max-content !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 30px !important;
+  list-style: none !important;
+  animation: partnersScroll 35s linear infinite !important;
+}
+
+/* Pausar animación al pasar el ratón */
+.region-featured-bottom-first .view-partner-footer ul:hover,
+[id*="partnersfooter"] ul:hover {
+  animation-play-state: paused !important;
+}
+
+/* Cada elemento <li> de la lista de logos */
+.region-featured-bottom-first .view-partner-footer ul li,
+[id*="partnersfooter"] ul li {
+  flex: 0 0 auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  border: none !important;
+  background: none !important;
+}
+
+/* Enlaces y campos de imagen */
+[id*="partnersfooter"] .views-field,
+[id*="partnersfooter"] .views-field-field-image,
+[id*="partnersfooter"] .field-content,
+[id*="partnersfooter"] a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+/* Normalización y aumento de tamaño de las imágenes de los logos */
+.region-featured-bottom-first .view-partner-footer img,
+[id*="partnersfooter"] img,
+[id*="partnersfooter"] img.image-style-footer {
+  height: 75px !important;
+  max-height: 75px !important;
+  width: auto !important;
+  max-width: 220px !important;
+  object-fit: contain !important;
+  display: block !important;
+  transition: transform 0.2s ease !important;
+}
+
+[id*="partnersfooter"] img:hover {
+  transform: scale(1.08) !important;
+}
+
+/* Animación continua de desplazamiento */
+@keyframes partnersScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* ==========================================================================
+   3. PIE DE PÁGINA (ESTRUCTURA DE DOS COLUMNAS IDÉNTICA A PRODUCCIÓN)
+   ========================================================================== */
+
+/* Contenedor principal del pie de página */
+#footer,
+.site-footer,
+.region-footer {
+  background-color: #232323 !important;
+  color: #ffffff !important;
+  padding: 45px 30px !important;
+  clear: both !important;
+  overflow: hidden !important;
+}
+
+/* Envoltorio de columnas en flexbox a 2 columnas */
+.site-footer .layout-container,
+#footer .layout-container,
+.region-footer {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  flex-wrap: wrap !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+/* --- COLUMNA IZQUIERDA (Redes, Avisos y Políticas) --- */
+.region-footer-first,
+.region-footer-second,
+.region-footer-third {
+  flex: 0 0 50% !important;
+  width: 50% !important;
+  max-width: 50% !important;
+  box-sizing: border-box !important;
+  padding-right: 20px !important;
+}
+
+/* --- COLUMNA DERECHA (Horarios y Login) --- */
+.region-footer-fourth,
+.region-footer-fifth {
+  flex: 0 0 45% !important;
+  width: 45% !important;
+  max-width: 45% !important;
+  margin-left: auto !important;
+  box-sizing: border-box !important;
+  text-align: right !important;
+}
+
+/* --- TÍTULOS (FOLLOW US ON / HORARIOS DE OFICINA) --- */
+#footer h2,
+.site-footer h2,
+.region-footer h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif !important;
+  color: #d1d1d1 !important;
+  font-size: 0.9rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  margin-top: 0 !important;
+  margin-bottom: 16px !important;
+  border-bottom: none !important;
+}
+
+/* --- ENLACES LEGALES (AZUL CIAN) --- */
+#footer a,
+.site-footer a,
+.region-footer a {
+  color: #00bdf2 !important;
+  text-decoration: none !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px !important;
+  line-height: 1.8 !important;
+  display: inline-block !important;
+  border-bottom: none !important;
+}
+
+#footer a:hover,
+.site-footer a:hover,
+.region-footer a:hover {
+  text-decoration: underline !important;
+}
+
+/* --- ICONOS DE REDES SOCIALES --- */
+.region-footer-first .views-field,
+.region-footer-first p {
+  display: flex !important;
+  gap: 12px !important;
+  margin-bottom: 25px !important;
+}
+
+.region-footer-first svg,
+.region-footer-first img {
+  font-size: 1.3rem !important;
+  color: #00bdf2 !important;
+}
+
+/* --- BLOQUE DE HORARIOS (ELIMINAR FONDO BLANCO) --- */
+.region-footer-fourth .block,
+.region-footer-fifth .block,
+.region-footer-fourth div,
+.region-footer-fifth div {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  color: #e0e0e0 !important;
+}
+
+.region-footer-fourth p,
+.region-footer-fifth p {
+  margin: 6px 0 !important;
+  font-size: 0.88rem !important;
+  line-height: 1.5 !important;
+  color: #dcdcdc !important;
+}
+
+/* Icono o enlace de Login a la derecha */
+.region-footer-fourth a,
+.region-footer-fifth a {
+  display: inline-block !important;
+  margin-top: 15px !important;
+}
