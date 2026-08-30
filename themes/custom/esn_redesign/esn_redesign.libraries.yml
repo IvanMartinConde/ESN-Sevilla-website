@@ -8,6 +8,7 @@ global-styling:
       css/components.css: {}
       css/events.css: {}
       css/footer.css: {}
+      css/widget.css: {}
 
   js:
     js/custom.js: {}
