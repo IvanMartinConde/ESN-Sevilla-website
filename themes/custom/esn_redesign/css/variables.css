@@ -17,3 +17,71 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* ===================================================
+   AJUSTES RESPONSIVE PARA MÓVILES (<= 768px)
+   =================================================== */
+@media (max-width: 768px) {
+
+  /* 1. CABECERA Y NAVEGACIÓN */
+  .region-nav-main,
+  .main-menu,
+  nav.menu--main ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 12px;
+    padding: 10px;
+  }
+
+  nav.menu--main ul li a {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    white-space: nowrap;
+  }
+
+  /* 2. SECCIÓN HERO / SLIDER DESTACADO */
+  .destacado-slide {
+    height: 380px !important;
+    min-height: auto !important;
+  }
+
+  .destacado-content {
+    padding: 20px 15px !important;
+    bottom: 20px !important;
+    left: 15px !important;
+    right: 15px !important;
+  }
+
+  .destacado-title {
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .destacado-subtitle {
+    font-size: 0.9rem !important;
+    margin-bottom: 12px !important;
+  }
+
+  .destacado-btn {
+    padding: 8px 16px !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* 3. EVENTOS Y CARDS */
+  .events-grid,
+  .eventos-container,
+  .esn-cards-wrapper {
+    grid-template-columns: 1fr !important;
+    padding: 0 15px;
+    gap: 20px;
+  }
+
+  /* 4. WIDGET MASCOTA 3D (evitar que tape la pantalla en móviles) */
+  .esn-mascot-widget {
+    bottom: 15px !important;
+    right: 15px !important;
+    width: 90px !important;
+    height: 90px !important;
+  }
+}
