@@ -188,34 +188,205 @@ body.path-eventos-esn .views-field-field-enlace-eventup a:hover {
 
 /* 7. Optimización específica para móviles (hasta 768px) */
 @media (max-width: 768px) {
+
+  /* Contenedor de la lista de eventos */
   body.path-eventos-esn .view-id-eventos_esn .view-content {
-    gap: 1.5rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.25rem !important;
     padding: 1rem 0 !important;
+    width: 100% !important;
   }
 
+  /* Tarjeta del evento (altura elástica y contención limpia) */
   body.path-eventos-esn .views-row {
-    height: 72vh !important;
-    height: 72dvh !important;
-    min-height: 72vh !important;
-    width: 92vw !important;
-    padding: 2rem 1.5rem !important;
-    border-radius: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: auto !important;             /* Eliminamos los 72vh fijos */
+    min-height: 380px !important;        /* Altura mínima agradable sin forzar cortes */
+    width: calc(100% - 24px) !important; /* Evita desbordes que causaba 92vw */
+    max-width: 440px !important;
+    margin: 0 auto !important;
+    padding: 1.5rem 1.25rem !important;
+    border-radius: 18px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
   }
 
+  /* Título escalable para pantallas desde 375px */
   body.path-eventos-esn .views-field-title,
   body.path-eventos-esn .views-field-title a {
-    font-size: 2rem !important;
-    line-height: 1.15 !important;
-    margin-bottom: 1.2rem !important;
+    font-size: clamp(1.35rem, 5vw, 1.75rem) !important; /* Escala suave entre 375px y 768px */
+    line-height: 1.2 !important;
+    margin-bottom: 0.8rem !important;
+    word-break: break-word !important;   /* Evita que palabras largas revienten el ancho */
   }
 
+  /* Fecha */
   body.path-eventos-esn .views-field-field-fecha-del-evento {
-    font-size: 0.95rem !important;
-    letter-spacing: 1px !important;
+    font-size: 0.9rem !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 0.5rem !important;
   }
 
+  /* Botón de Eventup */
   body.path-eventos-esn .views-field-field-enlace-eventup a {
-    padding: 0.75rem 1.8rem !important;
+    display: inline-block !important;
+    padding: 0.65rem 1.5rem !important;
     font-size: 0.85rem !important;
+    text-align: center !important;
+    border-radius: 20px !important;
   }
+}
+
+@media (max-width: 460px) {
+
+  /* 1. Anular márgenes y paddings en TODOS los contenedores padre de Bartik */
+  body.path-eventos-esn .layout-container,
+  body.path-eventos-esn #main-wrapper,
+  body.path-eventos-esn #content,
+  body.path-eventos-esn .region-content,
+  body.path-eventos-esn .main-content,
+  body.path-eventos-esn .views-element-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  body.path-eventos-esn .view-id-eventos_esn,
+  body.path-eventos-esn .view-id-eventos_esn .view-content {
+    padding: 0.5rem 0 !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* 2. Tarjeta con ancho máximo (dejando solo 8px de margen limpio a cada lado) */
+  body.path-eventos-esn .views-row {
+    width: calc(100vw - 16px) !important;
+    max-width: calc(100vw - 16px) !important;
+    margin: 0 auto !important;
+    padding: 1rem !important;
+    border-radius: 16px !important;
+    box-sizing: border-box !important;
+
+    /* Proporción para la imagen completa */
+    height: auto !important;
+    min-height: auto !important;
+    aspect-ratio: 4 / 3 !important;
+
+    background-size: 100% 100% !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.22), 
+                0 6px 18px rgba(0, 0, 0, 0.1) !important;
+  }
+}
+
+  /* 3. Fecha (Badge flotante arriba) */
+  body.path-eventos-esn .views-field-field-fecha-del-evento {
+    align-self: flex-start !important;
+    display: inline-block !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
+    color: #ffffff !important;
+    padding: 4px 10px !important;
+    border-radius: 8px !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    margin: 0 !important;
+  }
+
+  /* 4. Título */
+  body.path-eventos-esn .views-field-title,
+  body.path-eventos-esn .views-field-title a {
+    color: #ffffff !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7) !important;
+    font-size: 1.35rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.5px !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    margin: 0.3rem 0 !important;
+  }
+
+  /* 5. Botón centrado en la base */
+  body.path-eventos-esn .views-field-field-enlace-eventup a {
+    align-self: center !important;
+    width: auto !important;
+    min-width: 180px !important;
+    text-align: center !important;
+    font-size: 0.85rem !important;
+    font-weight: 800 !important;
+    padding: 0.65rem 1.4rem !important;
+    border-radius: 25px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+    margin: 0 !important;
+  }
+}
+
+
+/* ===================================================
+   TARJETAS DE EVENTOS MODERNAS (MICROINTERACCIONES)
+   =================================================== */
+.views-element-container .views-row,
+.event-card,
+.destacado-wrapper {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+/* Efecto hover suave en escritorio */
+@media (hover: hover) and (pointer: fine) {
+  .views-element-container .views-row:hover,
+  .event-card:hover,
+  .destacado-wrapper:hover {
+    transform: translateY(-6px) scale(1.01) !important;
+    box-shadow: 0 16px 32px rgba(0, 174, 239, 0.18), 
+                0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  /* Zoom sutil de la imagen al hacer hover */
+  .views-element-container .views-row:hover img,
+  .event-card:hover img {
+    transform: scale(1.04) !important;
+  }
+}
+
+.views-element-container .views-row img,
+.event-card img {
+  transition: transform 0.4s ease !important;
+}
+
+/* Píldora de categoría en la foto (Glassmorphism) */
+.destacado-content .eventos,
+.badge-categoria {
+  background: rgba(15, 23, 42, 0.55) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+  padding: 4px 14px !important;
+  border-radius: 20px !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
 }
