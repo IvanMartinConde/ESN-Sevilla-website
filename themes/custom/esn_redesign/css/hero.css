@@ -373,14 +373,111 @@
   transform: scale(1.2) !important;
 }
 
+/* ===================================================
+   CORRECCIÓN DEL BLOQUE AZUL "¿QUIÉNES SOMOS?"
+   =================================================== */
 @media (max-width: 768px) {
-  .destacado-slider {
-    min-height: 420px !important;
-    height: 55vh !important;
+
+  /* 1. Contenedor exterior blanco: permitir que todo sea visible */
+  .region-content,
+  #main-wrapper,
+  .block-views-blockslider-hero-block-1,
+  .layout-container {
+    overflow: visible !important;
   }
-  .destacado-title { font-size: 1.9rem !important; }
-  .destacado-subtitle { font-size: 0.95rem !important; }
-  .destacado-btn { font-size: 0.95rem !important; padding: 10px 24px !important; }
-  .destacado-arrow { font-size: 1.6rem !important; padding: 10px 8px !important; }
+
+  /* 2. La tarjeta azul completa con su degradado y foto */
+  #show_bg_2,
+  .destacado-about-box,
+  .views-element-container #show_bg_2 {
+    position: relative !important;
+    top: auto !important;             /* Anula desplazamientos que decapitan el texto */
+    margin: 1.5rem auto 1rem auto !important;
+    width: calc(100% - 24px) !important;
+    max-width: 440px !important;
+    height: auto !important;           /* Altura elástica para que no se corte */
+    min-height: auto !important;
+    padding: 2rem 1.25rem 1.5rem 1.25rem !important;
+    border-radius: 20px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  /* 3. El texto completo con margen superior visible */
+  #show_bg_2 p,
+  #show_bg_2 .about-text {
+    font-size: 0.92rem !important;
+    line-height: 1.45 !important;
+    color: #ffffff !important;
+    text-align: center !important;
+    margin: 0 0 1.25rem 0 !important;
+    padding-top: 0 !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4) !important;
+  }
+
+  /* 4. Botón "¿QUIÉNES SOMOS?" */
+  #show_bg_2 .btn,
+  #show_bg_2 a.button-quienes-somos,
+  #show_bg_2 .btn-primary {
+    font-size: 0.85rem !important;
+    font-weight: 800 !important;
+    padding: 0.7rem 1.6rem !important;
+    border-radius: 25px !important;
+    margin-bottom: 1.25rem !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  /* 5. Iconos de redes sociales alineados abajo */
+  #show_bg_2 .social-icons,
+  #show_bg_2 .redes {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    margin-top: 0 !important;
+    padding-bottom: 0.25rem !important;
+  }
+  /* ===================================================
+   RESET TOTAL HIJOS DE #show_bg_2 (TEXTO COMPLETO VISIBLE)
+   =================================================== */
+#show_bg_2 *,
+#show_bg_2 p,
+#show_bg_2 div,
+#show_bg_2 span,
+#show_bg_2 h2,
+#show_bg_2 h3 {
+  position: static !important;
+  top: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  margin-top: 0 !important;
+  height: auto !important;
+  min-height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  clip-path: none !important;
+  clip: auto !important;
 }
 
+/* Espaciado limpio para los textos dentro del recuadro azul */
+#show_bg_2 {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+  height: auto !important;
+}
+
+#show_bg_2 p {
+  margin-bottom: 1.25rem !important;
+  color: #ffffff !important;
+  font-size: 0.9rem !important;
+  line-height: 1.5 !important;
+  text-align: center !important;
+}
+}
