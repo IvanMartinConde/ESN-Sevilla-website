@@ -257,21 +257,28 @@
   z-index: 2 !important;
 }
 
-/* Textos y contenido */
+/* Textos y contenido (CENTRADO VERTICAL Y HORIZONTAL COHESIVO) */
 .destacado-content {
   position: relative !important;
   z-index: 3 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;       /* Centra de forma estricta todos los hijos */
+  justify-content: center !important;
   text-align: center !important;
   color: #ffffff !important;
   padding: 20px !important;
   max-width: 900px !important;
+  width: 100% !important;
   margin: 0 auto !important;
+  box-sizing: border-box !important;
 }
 
 .destacado-tag {
   display: inline-block !important;
   background: rgba(255, 255, 255, 0.2) !important;
   backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
   color: #ffffff !important;
   font-size: 0.8rem !important;
   font-weight: 700 !important;
@@ -283,25 +290,29 @@
 }
 
 .destacado-title {
-  font-size: 3.2rem !important;
+  font-size: clamp(2rem, 4.5vw, 3.2rem) !important; /* Escala suave según monitor */
   font-weight: 900 !important;
   color: #ffffff !important;
   letter-spacing: 3px !important;
   text-transform: uppercase !important;
   margin: 0 0 10px 0 !important;
   line-height: 1.15 !important;
+  width: 100% !important;
+  text-align: center !important;
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7) !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
 }
 
 .destacado-subtitle {
-  font-size: 1.25rem !important;
+  font-size: clamp(0.95rem, 2vw, 1.25rem) !important;
   font-weight: 600 !important;
   color: #f3f3f3 !important;
   letter-spacing: 2px !important;
   text-transform: uppercase !important;
   margin: 0 auto 28px auto !important;
   line-height: 1.4 !important;
+  width: 100% !important;
+  text-align: center !important;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7) !important;
 }
 
@@ -315,7 +326,7 @@
   border-radius: 8px !important;
   text-decoration: none !important;
   transition: all 0.25s ease !important;
-  box-shadow: 0 4px 15px #191b55 !important;
+  box-shadow: 0 4px 15px rgba(25, 27, 85, 0.6) !important;
   border: none !important;
 }
 
